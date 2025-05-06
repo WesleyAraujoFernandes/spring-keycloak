@@ -71,7 +71,7 @@ public class LoginSerivceKeycloakImpl implements LoginService<String> {
 
         try {
             ResponseEntity<String> response = httpComponent.restTemplate().postForEntity(
-                    keycloakServerUrl + "protocol/openid-connect/token",
+                    keycloakServerUrl + "/protocol/openid-connect/token",
                     request,
                     String.class);
             return ResponseEntity.ok(response.getBody());

@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "6cd9ec20-c601-403f-aaff-669b503e9e59",
+		"name": "Keycloak-Spring-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4453600"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"hugo\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/refresh?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4M2I1NTA5OS0yNjUyLTQ0NzMtODM4Mi02MDU2YTNjMGUyZDcifQ.eyJleHAiOjE3NDUzNDczMTIsImlhdCI6MTc0NTM0NTUxMiwianRpIjoiOTVkN2ViMmEtZDI1Yi00MDdkLWJjMjUtMjA5ZjQzYTIzYjFmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL1JFQUxNX1NQUklOR19BUEkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC9yZWFsbXMvUkVBTE1fU1BSSU5HX0FQSSIsInN1YiI6ImU2OTIyNGYzLTkwNTktNDkyMy05NzY4LTExZGJhOWU4MTZhZSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJDTElFTlRfU1BSSU5HIiwic2Vzc2lvbl9zdGF0ZSI6Ijg3ODc1Y2IyLWYwOTgtNDc3Zi1hOWNmLWRiNmY2ZjE1YTcxNiIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6Ijg3ODc1Y2IyLWYwOTgtNDc3Zi1hOWNmLWRiNmY2ZjE1YTcxNiJ9.CmKdSVNNU5eqB2BVruz2INIgJ8-6jeTy290fZJ0TONI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"refresh"
+					],
+					"query": [
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4M2I1NTA5OS0yNjUyLTQ0NzMtODM4Mi02MDU2YTNjMGUyZDcifQ.eyJleHAiOjE3NDUzNDczMTIsImlhdCI6MTc0NTM0NTUxMiwianRpIjoiOTVkN2ViMmEtZDI1Yi00MDdkLWJjMjUtMjA5ZjQzYTIzYjFmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL1JFQUxNX1NQUklOR19BUEkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC9yZWFsbXMvUkVBTE1fU1BSSU5HX0FQSSIsInN1YiI6ImU2OTIyNGYzLTkwNTktNDkyMy05NzY4LTExZGJhOWU4MTZhZSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJDTElFTlRfU1BSSU5HIiwic2Vzc2lvbl9zdGF0ZSI6Ijg3ODc1Y2IyLWYwOTgtNDc3Zi1hOWNmLWRiNmY2ZjE1YTcxNiIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6Ijg3ODc1Y2IyLWYwOTgtNDc3Zi1hOWNmLWRiNmY2ZjE1YTcxNiJ9.CmKdSVNNU5eqB2BVruz2INIgJ8-6jeTy290fZJ0TONI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/login?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4M2I1NTA5OS0yNjUyLTQ0NzMtODM4Mi02MDU2YTNjMGUyZDcifQ.eyJleHAiOjE3NDY1NjYwODksImlhdCI6MTc0NjU2NDI4OSwianRpIjoiNWE3NGFiNDAtYjE4ZC00NmYyLWJhZjQtNGFiNTY2NjExMGVlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL1JFQUxNX1NQUklOR19BUEkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC9yZWFsbXMvUkVBTE1fU1BSSU5HX0FQSSIsInN1YiI6IjNlZThhZTU1LTFkYTMtNDVhYi1iYjU1LWJmOTJlZDA2YmE0YyIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJDTElFTlRfU1BSSU5HIiwic2Vzc2lvbl9zdGF0ZSI6IjE4MDU5ODQ3LThkODYtNGM1OS1hMjQ5LTQxYTUxZDk3MmZhMyIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjE4MDU5ODQ3LThkODYtNGM1OS1hMjQ5LTQxYTUxZDk3MmZhMyJ9.1gyA848KaJcEpwRzLsOu5ynVw6WL-N8JXBeNZjpPl9o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4M2I1NTA5OS0yNjUyLTQ0NzMtODM4Mi02MDU2YTNjMGUyZDcifQ.eyJleHAiOjE3NDY1NjYwODksImlhdCI6MTc0NjU2NDI4OSwianRpIjoiNWE3NGFiNDAtYjE4ZC00NmYyLWJhZjQtNGFiNTY2NjExMGVlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL1JFQUxNX1NQUklOR19BUEkiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXV0aC9yZWFsbXMvUkVBTE1fU1BSSU5HX0FQSSIsInN1YiI6IjNlZThhZTU1LTFkYTMtNDVhYi1iYjU1LWJmOTJlZDA2YmE0YyIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJDTElFTlRfU1BSSU5HIiwic2Vzc2lvbl9zdGF0ZSI6IjE4MDU5ODQ3LThkODYtNGM1OS1hMjQ5LTQxYTUxZDk3MmZhMyIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjE4MDU5ODQ3LThkODYtNGM1OS1hMjQ5LTQxYTUxZDk3MmZhMyJ9.1gyA848KaJcEpwRzLsOu5ynVw6WL-N8JXBeNZjpPl9o"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
