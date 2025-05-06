@@ -13,6 +13,7 @@ public class HttpParamsMapBuilder {
     public HttpParamsMapBuilder withClient(String clientId) {
         params.add("client_id", clientId);
         return this;
+
     }
 
     public HttpParamsMapBuilder withClientSecret(String clientSecret) {
